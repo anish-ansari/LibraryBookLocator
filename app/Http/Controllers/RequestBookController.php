@@ -15,7 +15,9 @@ class RequestBookController extends Controller
      */
     public function index()
     {
-        //
+        $requestbooks = RequestBook::all()->toArray();
+        //dd($books);
+        return new RequestBookResource($requestbooks);
     }
 
     /**
@@ -75,7 +77,12 @@ class RequestBookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $requestbook = RequestBook::findorfail($id);
+        $requestbook->book_name=$request->input('book_name');  
+        $requestbook->author_name=$request->input('author_name');
+        if($requestbook->save()){
+            return new RequestBookResource($requestbook);
+        }
     }
 
     /**
@@ -86,6 +93,8 @@ class RequestBookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $requestbook = RequestBook::findOrFail($id);
+        $requestbook->delete();
+        return new RequestBookResource($requestbook);
     }
 }

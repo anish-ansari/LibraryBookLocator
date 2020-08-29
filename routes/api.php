@@ -18,16 +18,26 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-//Request book
+//Request book start
 Route::post('requestbook', 'RequestBookController@store');
+Route::get('requestbooks', 'RequestBookController@index');
+Route::post('updaterequestbook/{id}', 'RequestBookController@update');
+Route::get('deleterequestbook/{id}', 'RequestBookController@destroy');
+// request book end
 
-//Login logout register
+
+//Login logout register start
 Route::group(['prefix' => 'v1'], function () {
     Route::post('/login', 'UsersController@login');
     Route::post('/register', 'UsersController@register');
     Route::get('/logout', 'UsersController@logout')->middleware('auth:api');
 });
 
-//Book
+//Login logout register end
+
+//Book start
 Route::get('books', 'BookController@index');
 Route::post('book', 'BookController@store');
+Route::post('updatebook/{id}', 'BookController@update');
+Route::get('deletebook/{id}', 'BookController@destroy');
+//Book end
