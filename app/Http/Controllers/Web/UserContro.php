@@ -82,6 +82,10 @@ class UserContro extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        if(User::destroy($id)){
+            return redirect()->back()->with('deleted','Deleted Successfully');
+         }
+         return redirect()->back()->with('delete-failed','Could not delete');
     }
 }

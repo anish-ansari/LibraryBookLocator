@@ -33,7 +33,7 @@
                         <th> User Email </th>
                         <th>User Password</th>
                         {{-- <th> USer Icon </th> --}}
-                        {{-- <th>Actions </th> --}}
+                        <th>Actions </th>
                         
                     </tr>
                     </thead>
@@ -44,7 +44,7 @@
                         <th> User Email </th>
                         <th>User Password</th>
                         {{-- <th> User Icon </th> --}}
-                        {{-- <th>Actions </th> --}}
+                        <th>Actions </th>
                     </tr>
                     </tfoot>
                     <tbody>
@@ -58,11 +58,11 @@
                             <td> {{ $user->password }} </td>
                             {{-- <td> {{ $user->name }} </td> --}}
                             {{-- <td> <img src="{{ $user->icon }}" width="100" height="100"></td> --}}
-                            {{-- <td>
-                                <a href="{{ URL::to('edit-user') }}/{{ $user->id }}" class="btn btn-outline-primary btn-sm"> Edit </a>
+                            <td>
+                                {{-- <a href="{{ URL::to('edit-user') }}/{{ $user->id }}" class="btn btn-outline-primary btn-sm"> Edit </a> --}}
                                 |
                                 <a href="{{ URL::to('delete-user') }}/{{ $user->id }}" class="btn btn-outline-danger btn-sm" onclick="checkDelete()"> Delete </a>
-                            </td> --}}
+                            </td>
 
                         </tr>
 

@@ -64,7 +64,7 @@
 
         <div>
             <img id="book_image" height="100" width="100">
-        </div> --}}
+        </div> 
 
         
         <div class="form-group">

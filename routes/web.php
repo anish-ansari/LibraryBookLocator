@@ -41,5 +41,5 @@ Route::get('delete-requestbook/{id}','Web\RequestBookContro@destroy');
 Route::get('all-users','Web\UserContro@index');
 // Route::get('edit-user/{id}','Web\UserContro@edit');
 // Route::post('update-user/{id}','Web\UserContro@update');
-// Route::get('delete-user/{id}','Web\UserContro@destroy');
+ Route::get('delete-user/{id}','Web\UserContro@destroy');
 //user end

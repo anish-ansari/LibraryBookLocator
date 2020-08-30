@@ -30,7 +30,7 @@
                     <tr>
                         <th> RequestBook Book Name </th>
                         <th> RequestBook Author Name </th>
-                        <th> User Id</th>
+                        {{-- <th> User Id</th> --}}
                         <th>Actions </th>
                     </tr>
                     </thead>
@@ -38,7 +38,7 @@
                     <tr>
                         <th> RequestBook Book Name </th>
                         <th> RequestBook Author Name </th>
-                           <th> User Id</th>
+                           {{-- <th> User Id</th> --}}
                         <th>Actions </th>
                     </tr>
                     </tfoot>
@@ -49,7 +49,7 @@
                         <tr>
                             <td> {{ $requestbook->book_name }} </td>
                             <td> {{ $requestbook->author_name }} </td>
-                            <td> {{ $requestbook->id_user}}      </td>
+                            {{-- <td> {{ $requestbook->id_user}}      </td> --}}
                             {{-- <td> <img src="{{ $requestbook->icon }}" width="100" height="100"></td> --}}
                             <td>
                                 <a href="{{ URL::to('edit-requestbook') }}/{{ $requestbook->id }}" class="btn btn-outline-primary btn-sm"> Edit </a>
