@@ -28,15 +28,17 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th> RequestBook Name </th>
-                        <th> RequestBook Icon </th>
+                        <th> RequestBook Book Name </th>
+                        <th> RequestBook Author Name </th>
+                        {{-- <th> User Id</th> --}}
                         <th>Actions </th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
-                        <th> RequestBook Name </th>
-                        <th> RequestBook Icon </th>
+                        <th> RequestBook Book Name </th>
+                        <th> RequestBook Author Name </th>
+                           {{-- <th> User Id</th> --}}
                         <th>Actions </th>
                     </tr>
                     </tfoot>
@@ -47,6 +49,7 @@
                         <tr>
                             <td> {{ $requestbook->book_name }} </td>
                             <td> {{ $requestbook->author_name }} </td>
+                            {{-- <td> {{ $requestbook->id_user}}      </td> --}}
                             {{-- <td> <img src="{{ $requestbook->icon }}" width="100" height="100"></td> --}}
                             <td>
                                 <a href="{{ URL::to('edit-requestbook') }}/{{ $requestbook->id }}" class="btn btn-outline-primary btn-sm"> Edit </a>

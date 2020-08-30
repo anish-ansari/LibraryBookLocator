@@ -17,6 +17,8 @@ class CreateRequestBooksTable extends Migration
             $table->increments('id');
             $table->string('book_name');
             $table->string('author_name');
+            //$table->string('id_user');
+            // dont uncomment this $table->string('name_user');
             //$table->timestamps();
         });
     }

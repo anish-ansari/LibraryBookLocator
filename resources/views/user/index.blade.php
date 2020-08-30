@@ -28,14 +28,19 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
+                        {{-- <th> User Name</th>
+                        <th> User Id</th> --}}
                         <th> User Email </th>
+                        <th>User Password</th>
                         {{-- <th> USer Icon </th> --}}
                         {{-- <th>Actions </th> --}}
-                        <th>User Password</th>
+                        
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
+                        {{-- <th> User Name</th>
+                        <th> User Id</th> --}}
                         <th> User Email </th>
                         <th>User Password</th>
                         {{-- <th> User Icon </th> --}}
@@ -47,6 +52,8 @@
                     @foreach($users as $user)
 
                         <tr>
+                            {{-- <td> {{ $user->user_name }} </td>
+                            <td> {{ $user->user_id }} </td> --}}
                             <td> {{ $user->email }} </td>
                             <td> {{ $user->password }} </td>
                             {{-- <td> {{ $user->name }} </td> --}}

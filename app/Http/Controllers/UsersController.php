@@ -38,9 +38,8 @@ class UsersController extends Controller
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            //'fname' => 'required',
-            //'lname' => 'required',
-            //'phone' => 'required|unique:users|regex:/(0)[0-9]{10}/',
+            //'user_name' => 'required',
+            //'user_id' => 'required|unique:users|regex:/(0)[0-9]{10}/',
             'email' => 'required|email|unique:users',
             'password' => 'required',
         ]);
