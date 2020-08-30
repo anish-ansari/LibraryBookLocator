@@ -1,6 +1,14 @@
-@extends('layout')
+{{--
+    
+    
+    
+    ============NOT IN USE=====================
+    
+    
+    
+    @extends('layout')
 @section('dashboard-content')
-    <h1> Create category form</h1>
+    <h1> Create RequestBook form</h1>
 
     @if(Session::get('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert" id="gone">
@@ -20,10 +28,10 @@
         </div>
     @endif
 
-    <form action="{{ URL::to('post-category-form') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ URL::to('post-requestbook-form') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="exampleInputEmail1"> Category name</label>
+            <label for="exampleInputEmail1"> Request Book Name name</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter category name" name="categoryName">
         </div>
 
@@ -50,4 +58,4 @@
         }
     </script>
 
-@stop
+@stop --}}

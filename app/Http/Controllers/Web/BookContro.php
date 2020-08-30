@@ -52,10 +52,11 @@ class BookContro extends Controller
             // if($shelf_image != null){
             //     $ext = $shelf_image->getClientOriginalExtension();
             //     $fileName = rand(10000, 50000) . '.' . $ext;
+            //     //  $shelf_image->getClientOriginalName() . '.' . $ext;
             //     if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
             //         if($shelf_image->move(public_path(), $fileName)){
             //             $book = Book::find($book->id);
-            //             $book->icon = url('/') . '/' . $fileName;
+            //             $book->shelf_image = url('/') . '/' . $fileName;
             //             $book->save();
             //         }
             //     }
@@ -68,7 +69,7 @@ class BookContro extends Controller
             //     if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
             //         if($book_image->move(public_path(), $fileName)){
             //             $book = Book::find($book->id);
-            //             $book->icon = url('/') . '/' . $fileName;
+            //             $book->book_image = url('/') . '/' . $fileName;
             //             $book->save();
             //         }
             //     }
@@ -131,7 +132,7 @@ class BookContro extends Controller
             //     if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
             //         if($shelf_image->move(public_path(), $fileName)){
             //             $book = Book::find($book->id);
-            //             $book->icon = url('/') . '/' . $fileName;
+            //             $book->shelf_image = url('/') . '/' . $fileName;
             //             $book->save();
             //         }
             //     }
@@ -144,7 +145,7 @@ class BookContro extends Controller
             //     if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
             //         if($book_image->move(public_path(), $fileName)){
             //             $book = Book::find($book->id);
-            //             $book->icon = url('/') . '/' . $fileName;
+            //             $book->book_image = url('/') . '/' . $fileName;
             //             $book->save();
             //         }
             //     }

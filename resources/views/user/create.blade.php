@@ -1,4 +1,14 @@
-@extends('layout')
+{{--
+    
+    
+    
+    
+    Not in use
+    
+    
+    
+    
+    @extends('layout')
 @section('dashboard-content')
     <h1> Create user form</h1>
 
@@ -27,10 +37,10 @@
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter user name" name="userName">
         </div>
 
-        {{-- <div class="form-group">
+        <div class="form-group">
             <label for="exampleInputEmail1"> Category Icon </label>
             <input type="file" class="form-control" name="categoryIcon" onchange="loadPhoto(event)">
-        </div> --}}
+        </div>
 
         <div>
             <img id="photo" height="100" width="100">
@@ -50,4 +60,4 @@
         }
     </script>
 
-@stop
+@stop --}}
