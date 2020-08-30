@@ -31,7 +31,7 @@
             <input type="text" class="form-control" value="{{ $book->author_name }}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter author name" name="author_name">
         </div>
 
-        {{-- <div class="form-group">
+        <div class="form-group">
             <label for="exampleInputEmail1"> Shelf No</label>
             <input type="text" class="form-control" value="{{ $book->shelf_no }}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0" name="shelf_no">
         </div>
@@ -67,15 +67,15 @@
         </div> --}}
 
         
-        {{-- <div class="form-group">
+        <div class="form-group">
             <label for="exampleInputEmail1"> Book Qunatity</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0" name="book_quantity">
         </div>
- --}}
+
 
         <button type="submit" class="btn btn-primary"> Update </button>
     </form>
-    {{-- <script>
+    <script>
         function loadShelf(event) {
             var reader = new FileReader();
             reader.onload = function () {
@@ -93,6 +93,6 @@
             };
             reader.readAsDataURL(event.target.files[0]);
         }
-    </script> --}}
+    </script>
 
 @stop

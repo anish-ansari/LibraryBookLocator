@@ -41,39 +41,39 @@ class BookController extends Controller
         $book = new Book;
         $book->book_name=$request->input('book_name');  
         $book->author_name=$request->input('author_name');
-        // $book->shelf_no=$request->input('shelf_no');
-        // $book->shelf_image="";
-        // $book->row_no=$request->input('row_no');
-        // $book->column_no=$request->input('column_no');
-        // $book->book_image="";
-        // $book->book_quantity=$request->input('book_quantity');
+        $book->shelf_no=$request->input('shelf_no');
+        $book->shelf_image="";
+        $book->row_no=$request->input('row_no');
+        $book->column_no=$request->input('column_no');
+        $book->book_image="";
+        $book->book_quantity=$request->input('book_quantity');
         if($book->save()){
-             // $shelf_image = $request->file('shelf_image');
-            // if($shelf_image != null){
-            //     $ext = $shelf_image->getClientOriginalExtension();
-            //     $fileName = rand(10000, 50000) . '.' . $ext;
-            //     if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
-            //         if($shelf_image->move(public_path(), $fileName)){
-            //             $book = Book::find($book->id);
-            //             $book->icon = url('/') . '/' . $fileName;
-            //             $book->save();
-            //         }
-            //     }
+             $shelf_image = $request->file('shelf_image');
+            if($shelf_image != null){
+                $ext = $shelf_image->getClientOriginalExtension();
+                $fileName = rand(10000, 50000) . '.' . $ext;
+                if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
+                    if($shelf_image->move(public_path(), $fileName)){
+                        $book = Book::find($book->id);
+                        $book->icon = url('/') . '/' . $fileName;
+                        $book->save();
+                    }
+                }
 
-            // }
-            // $book_image = $request->file('book_image');
-            // if($book_image != null){
-            //     $ext = $book_image->getClientOriginalExtension();
-            //     $fileName = rand(10000, 50000) . '.' . $ext;
-            //     if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
-            //         if($book_image->move(public_path(), $fileName)){
-            //             $book = Book::find($book->id);
-            //             $book->icon = url('/') . '/' . $fileName;
-            //             $book->save();
-            //         }
-            //     }
+            }
+            $book_image = $request->file('book_image');
+            if($book_image != null){
+                $ext = $book_image->getClientOriginalExtension();
+                $fileName = rand(10000, 50000) . '.' . $ext;
+                if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
+                    if($book_image->move(public_path(), $fileName)){
+                        $book = Book::find($book->id);
+                        $book->icon = url('/') . '/' . $fileName;
+                        $book->save();
+                    }
+                }
 
-            // }
+            }
             return new BookResource($book);
         }
     }
@@ -112,39 +112,39 @@ class BookController extends Controller
         $book = Book::findorFail($id);
         $book->book_name=$request->input('book_name');  
         $book->author_name=$request->input('author_name');
-        // $book->shelf_no=$request->input('shelf_no');
-        // $book->shelf_image="";
-        // $book->row_no=$request->input('row_no');
-        // $book->column_no=$request->input('column_no');
-        // $book->book_image="";
-        // $book->book_quantity=$request->input('book_quantity');
+        $book->shelf_no=$request->input('shelf_no');
+        $book->shelf_image="";
+        $book->row_no=$request->input('row_no');
+        $book->column_no=$request->input('column_no');
+        $book->book_image="";
+        $book->book_quantity=$request->input('book_quantity');
         if($book->save()){
-             // $shelf_image = $request->file('shelf_image');
-            // if($shelf_image != null){
-            //     $ext = $shelf_image->getClientOriginalExtension();
-            //     $fileName = rand(10000, 50000) . '.' . $ext;
-            //     if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
-            //         if($shelf_image->move(public_path(), $fileName)){
-            //             $book = Book::find($book->id);
-            //             $book->icon = url('/') . '/' . $fileName;
-            //             $book->save();
-            //         }
-            //     }
+             $shelf_image = $request->file('shelf_image');
+            if($shelf_image != null){
+                $ext = $shelf_image->getClientOriginalExtension();
+                $fileName = rand(10000, 50000) . '.' . $ext;
+                if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
+                    if($shelf_image->move(public_path(), $fileName)){
+                        $book = Book::find($book->id);
+                        $book->icon = url('/') . '/' . $fileName;
+                        $book->save();
+                    }
+                }
 
-            // }
-            // $book_image = $request->file('book_image');
-            // if($book_image != null){
-            //     $ext = $book_image->getClientOriginalExtension();
-            //     $fileName = rand(10000, 50000) . '.' . $ext;
-            //     if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
-            //         if($book_image->move(public_path(), $fileName)){
-            //             $book = Book::find($book->id);
-            //             $book->icon = url('/') . '/' . $fileName;
-            //             $book->save();
-            //         }
-            //     }
+            }
+            $book_image = $request->file('book_image');
+            if($book_image != null){
+                $ext = $book_image->getClientOriginalExtension();
+                $fileName = rand(10000, 50000) . '.' . $ext;
+                if($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg'){
+                    if($book_image->move(public_path(), $fileName)){
+                        $book = Book::find($book->id);
+                        $book->icon = url('/') . '/' . $fileName;
+                        $book->save();
+                    }
+                }
 
-            // }
+            }
             
             return new BookResource($book);
         

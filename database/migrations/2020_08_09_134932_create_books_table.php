@@ -17,12 +17,12 @@ class CreateBooksTable extends Migration
             $table->increments('id');
             $table->string('book_name');
             $table->string('author_name');
-            // $table->string('shelf_no');
-            // $table->string('shelf_image');
-            // $table->string('row_no');
-            // $table->string('column_no');
-            // $table->string('book_image');
-            // $table->string('book_quantity');
+            $table->string('shelf_no');
+            $table->string('shelf_image');
+            $table->string('row_no');
+            $table->string('column_no');
+            $table->string('book_image');
+            $table->string('book_quantity');
             // dont use timestamp
             //$table->timestamps();
         });

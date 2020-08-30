@@ -30,12 +30,12 @@
                     <tr>
                         <th> Book Name </th>
                         <th> Author Name </th>
-                        {{-- <th> Shelf No </th>
+                        <th> Shelf No </th>
                         <th> Shelf Image </th>
                         <th> Row No </th>
                         <th> Column No </th>
                         <th> Book Image </th> 
-                        <th> Book Qunatity</th>--}}
+                        <th> Book Qunatity</th>
                         <th>Actions </th>
                     </tr>
                     </thead>
@@ -43,12 +43,12 @@
                     <tr>
                         <th> Book Name </th>
                         <th> Author Name </th>
-                        {{-- <th> Shelf No </th>
+                        <th> Shelf No </th>
                         <th> Shelf Image </th>
                         <th> Row No </th>
                         <th> Column No </th>
                         <th> Book Image </th> 
-                        <th> Book Qunatity</th>--}}
+                        <th> Book Qunatity</th>
                         <th>Actions </th>
                     </tr>
                     </tfoot>
@@ -59,12 +59,12 @@
                         <tr>
                             <td> {{ $book->book_name }} </td>
                             <td> {{ $book->author_name }} </td>
-                            {{-- <td> {{ $book->shelf_no }} </td>
+                            <td> {{ $book->shelf_no }} </td>
                             <td> <img src="{{ $book->shelf_image }}" width="100" height="100"></td>
                             <td> {{ $book->row_no }} </td>
                             <td> {{ $book->column_no }} </td>
                             <td> <img src="{{ $book->book_image }}" width="100" height="100"></td> 
-                            <td> {{ $book->book_quantity }} </td>--}}
+                            <td> {{ $book->book_quantity }} </td>
                             <td>
                                 <a href="{{ URL::to('edit-book') }}/{{ $book->id }}" class="btn btn-outline-primary btn-sm"> Edit </a>
                                 |

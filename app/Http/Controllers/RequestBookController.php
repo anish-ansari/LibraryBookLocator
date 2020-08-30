@@ -41,6 +41,7 @@ class RequestBookController extends Controller
         $requestbook = new RequestBook;
         $requestbook->book_name=$request->input('book_name');  
         $requestbook->author_name=$request->input('author_name');
+        // $requestbook->id_user = $request->input('user');
         if($requestbook->save()){
             return new RequestBookResource($requestbook);
         }
@@ -80,6 +81,7 @@ class RequestBookController extends Controller
         $requestbook = RequestBook::findorfail($id);
         $requestbook->book_name=$request->input('book_name');  
         $requestbook->author_name=$request->input('author_name');
+        // $requestbook->id_user = $request->input('user');
         if($requestbook->save()){
             return new RequestBookResource($requestbook);
         }
