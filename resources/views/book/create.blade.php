@@ -67,6 +67,12 @@
             <img id="book_image" height="100" width="100">
         </div> --}}
 
+        {{-- <div class="form-group">
+            <label for="exampleInputEmail1"> Book Qunatity</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0" name="book_quantity">
+        </div>
+ --}}
+
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 

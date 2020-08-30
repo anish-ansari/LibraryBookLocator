@@ -22,6 +22,7 @@ class CreateBooksTable extends Migration
             // $table->string('row_no');
             // $table->string('column_no');
             // $table->string('book_image');
+            // $table->string('book_quantity');
             // dont use timestamp
             //$table->timestamps();
         });
