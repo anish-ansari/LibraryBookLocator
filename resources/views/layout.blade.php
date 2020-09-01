@@ -28,7 +28,7 @@
 
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html"> LibraryBookLoactor Dashboard</a>
+    <a class="navbar-brand mr-1" href="{{ URL::to('dashboard') }}"> LibraryBookLoactor Dashboard</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -92,7 +92,7 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{ URL::to('dashboard') }}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </a>
@@ -138,18 +138,31 @@
         </li>
 
 
-
-        {{-- <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-fw fa-folder"></i>
-                <span>Slider</span>
+                <span>Rule</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <a class="dropdown-item" href="{{ URL::to('get-slider-form') }}"> Create Slider</a>
-                <a class="dropdown-item" href="{{ URL::to('all-sliders') }}"> All Sliders </a>
-            </div>
-        </li> --}}
 
+                <a class="dropdown-item" href="{{ URL::to('create-rule') }}"> Add Rule</a>
+                <a class="dropdown-item" href="{{ URL::to('all-rules') }}"> All Rules </a>
+
+            </div>
+        </li>
+
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-fw fa-folder"></i>
+                <span>Update</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+
+                <a class="dropdown-item" href="{{ URL::to('create-update') }}"> Add Update</a>
+                <a class="dropdown-item" href="{{ URL::to('all-updates') }}"> All Updates </a>
+
+            </div>
+        </li>
 
 
     </ul>

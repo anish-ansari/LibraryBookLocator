@@ -41,3 +41,13 @@ Route::post('book', 'BookController@store');
 Route::post('updatebook/{id}', 'BookController@update');
 Route::get('deletebook/{id}', 'BookController@destroy');
 //Book end
+
+
+// rule
+Route::get('rules', 'RuleController@index');
+// 
+
+// update
+Route::get('updates', 'UpdateController@index');
+
+// update

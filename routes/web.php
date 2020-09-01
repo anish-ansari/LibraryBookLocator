@@ -43,3 +43,25 @@ Route::get('all-users','Web\UserContro@index');
 // Route::post('update-user/{id}','Web\UserContro@update');
  Route::get('delete-user/{id}','Web\UserContro@destroy');
 //user end
+
+
+//rule start
+Route::get('create-rule','Web\RuleContro@create');
+Route::post('post-rule-form','Web\RuleContro@store');
+Route::get('all-rules','Web\RuleContro@index');
+Route::get('edit-rule/{id}','Web\RuleContro@edit');
+Route::post('update-rule/{id}','Web\RuleContro@update');
+Route::get('delete-rule/{id}','Web\RuleContro@destroy');
+
+// rule end
+
+// update start
+
+Route::post('post-update-form','Web\UpdateContro@store');
+Route::get('create-update','Web\UpdateContro@create');
+Route::get('all-updates','Web\UpdateContro@index');
+Route::get('edit-update/{id}','Web\UpdateContro@edit');
+Route::post('update-update/{id}','Web\UpdateContro@update');
+Route::get('delete-update/{id}','Web\UpdateContro@destroy');
+
+// update end
