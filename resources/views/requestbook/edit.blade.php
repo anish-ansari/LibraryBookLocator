@@ -33,6 +33,11 @@
         </div>
 
         {{-- <div class="form-group">
+            <label for="exampleInputEmail1"> User Id</label>
+            <input type="text" class="form-control" value="{{ $requestbook->id_user }}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter book name" name="id_user">
+        </div> --}}
+
+        {{-- <div class="form-group">
             <label for="exampleInputEmail1"> requestbook Icon </label>
             <input type="file" class="form-control" name="requestbookIcon" onchange="loadPhoto(event)">
         </div>
