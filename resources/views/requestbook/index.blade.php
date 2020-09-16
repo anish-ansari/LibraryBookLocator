@@ -30,6 +30,8 @@
                     <tr>
                         <th> RequestBook Book Name </th>
                         <th> RequestBook Author Name </th>
+                        <th> RequestBook Publication </th>
+                        <th> RequestBook Edition </th>
                         <th> User Id</th>
                         <th>Actions </th>
                     </tr>
@@ -38,6 +40,8 @@
                     <tr>
                         <th> RequestBook Book Name </th>
                         <th> RequestBook Author Name </th>
+                        <th> RequestBook Publication </th>
+                        <th> RequestBook Edition </th>
                         <th> User Id</th>
                         <th>Actions </th>
                     </tr>
@@ -49,10 +53,12 @@
                         <tr>
                             <td> {{ $requestbook->book_name }} </td>
                             <td> {{ $requestbook->author_name }} </td>
+                            <td> {{ $requestbook->book_publication }} </td>
+                            <td> {{ $requestbook->book_edition }} </td>
                             <td> {{ $requestbook->user_id}} </td>
                             {{-- <td> <img src="{{ $requestbook->icon }}" width="100" height="100"></td> --}}
                             <td>
-                                <a href="{{ URL::to('edit-requestbook') }}/{{ $requestbook->id }}" class="btn btn-outline-primary btn-sm"> Edit </a>
+                                {{-- <a href="{{ URL::to('edit-requestbook') }}/{{ $requestbook->id }}" class="btn btn-outline-primary btn-sm"> Edit </a> --}}
                                 |
                                 <a href="{{ URL::to('delete-requestbook') }}/{{ $requestbook->id }}" class="btn btn-outline-danger btn-sm" onclick="checkDelete()"> Delete </a>
                             </td>

@@ -41,6 +41,8 @@ class RequestBookController extends Controller
         $requestbook = new RequestBook;
         $requestbook->book_name=$request->input('book_name');  
         $requestbook->author_name=$request->input('author_name');
+        $requestbook->book_publication=$request->input('book_publication');  
+        $requestbook->book_edition=$request->input('book_edition');  
         $requestbook->user_id = $request->input('user_id');
         if($requestbook->save()){
             return new RequestBookResource($requestbook);
