@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +15,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
+// Route::get('/ad', function () {
+//     return view('auth.login');
+// });
 
-Route::get('dashboard' ,'DashboardController@index');
+
+// Route::get('login', function () {
+//     return view('adminpanel.login');
+// });
+
+// Route::get('register', function () {
+//     return view('adminpanel.register');
+// });
+
+
 
 //book start
 Route::post('post-book-form','Web\BookContro@store');
@@ -27,6 +40,9 @@ Route::get('all-books','Web\BookContro@index');
 Route::get('edit-book/{id}','Web\BookContro@edit');
 Route::post('update-book/{id}','Web\BookContro@update');
 Route::get('delete-book/{id}','Web\BookContro@destroy');
+
+// soft delete
+// Route::get('soft-delete-book/{id}','Web\BookContro@softdelete');
 //book end
 
 //requestbook start
@@ -65,3 +81,11 @@ Route::post('update-update/{id}','Web\UpdateContro@update');
 Route::get('delete-update/{id}','Web\UpdateContro@destroy');
 
 // update end
+
+// route
+Auth::routes();
+
+Route::group(['middleware'=>['auth','admin']],function(){
+    Route::get('/dashboard' ,'DashboardController@index')->name('dashboard');
+});
+Route::get('/home', 'HomeController@index')->name('home');

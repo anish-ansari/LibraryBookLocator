@@ -67,7 +67,9 @@
                             <td> {{ $book->book_quantity }} </td>
                             <td>
                                 <a href="{{ URL::to('edit-book') }}/{{ $book->id }}" class="btn btn-outline-primary btn-sm"> Edit </a>
-                                |
+                                <hr>
+                                {{-- <a href="{{ URL::to('soft-delete-book') }}/{{ $book->id }}" class="btn btn-outline-warning btn-sm" onclick="checkDelete()">Soft Delete </a>
+                                <hr> --}}
                                 <a href="{{ URL::to('delete-book') }}/{{ $book->id }}" class="btn btn-outline-danger btn-sm" onclick="checkDelete()"> Delete </a>
                             </td>
 
