@@ -36,6 +36,7 @@
                         <th> Column No </th>
                         <th> Book Image </th> 
                         <th> Book Qunatity</th>
+                        <th> User Id</th>
                         <th>Actions </th>
                     </tr>
                     </thead>
@@ -49,6 +50,7 @@
                         <th> Column No </th>
                         <th> Book Image </th> 
                         <th> Book Qunatity</th>
+                        <th> User Id</th>
                         <th>Actions </th>
                     </tr>
                     </tfoot>
@@ -65,6 +67,7 @@
                             <td> {{ $book->column_no }} </td>
                             <td> <img src="{{ $book->book_image }}" width="100" height="100"></td> 
                             <td> {{ $book->book_quantity }} </td>
+                            <td> {{ $book->user_id }} </td>
                             <td>
                                 <a href="{{ URL::to('edit-book') }}/{{ $book->id }}" class="btn btn-outline-primary btn-sm"> Edit </a>
                                 <hr>

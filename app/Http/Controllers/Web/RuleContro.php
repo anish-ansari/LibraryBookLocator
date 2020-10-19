@@ -81,7 +81,8 @@ class RuleContro extends Controller
     public function update(Request $request, $id)
     {
         $rule = Rule::find($id);
-        $rule->rule=$request->input('rule');  
+        $rule->rule=$request->input('rule'); 
+        $rule->user_id=auth()->user()->user_id; 
         if($rule->save()){
 
             return redirect()->back()->with('success','Update Successfully');

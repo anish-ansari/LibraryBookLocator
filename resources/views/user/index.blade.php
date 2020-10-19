@@ -31,7 +31,7 @@
                         <th> User Name</th>
                         <th> User Id</th>
                         <th> User Email </th>
-                        <th>User Password</th>
+                        <th>User Type</th>
                         {{-- <th> USer Icon </th> --}}
                         <th>Actions </th>
                         
@@ -42,7 +42,7 @@
                         <th> User Name</th>
                         <th> User Id</th>
                         <th> User Email </th>
-                        <th>User Password</th>
+                        <th>User Type</th>
                         {{-- <th> User Icon </th> --}}
                         <th>Actions </th>
                     </tr>
@@ -55,7 +55,7 @@
                             <td> {{ $user->user_name }} </td>
                             <td> {{ $user->user_id }} </td>
                             <td> {{ $user->email }} </td>
-                            <td> {{ $user->password }} </td>
+                            <td> {{ $user->usertype }} </td>
                             {{-- <td> {{ $user->name }} </td> --}}
                             {{-- <td> <img src="{{ $user->icon }}" width="100" height="100"></td> --}}
                             <td>

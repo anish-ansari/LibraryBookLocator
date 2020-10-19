@@ -45,7 +45,8 @@ class BookContro extends Controller
         $book->row_no=$request->input('row_no');
         $book->column_no=$request->input('column_no');
         $book->book_image="";
-         $book->book_quantity=$request->input('book_quantity');
+        $book->book_quantity=$request->input('book_quantity');
+        $book->user_id=auth()->user()->user_id;
         if($book->save()){
 
             $shelf_image = $request->file('shelf_image');
@@ -124,7 +125,7 @@ class BookContro extends Controller
         $book->column_no=$request->input('column_no');
         $book->book_image="";
         $book->book_quantity=$request->input('book_quantity');
-        // $book->user_id=auth()->user()->user_id;
+        $book->user_id=auth()->user()->user_id;
         if($book->save()){
             $shelf_image = $request->file('shelf_image');
             if($shelf_image != null){

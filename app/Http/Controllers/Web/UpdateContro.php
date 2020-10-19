@@ -82,6 +82,7 @@ class UpdateContro extends Controller
     {
         $update = Update::find($id);
         $update->update=$request->input('update');  
+        $update->user_id=auth()->user()->user_id; 
         if($update->save()){
 
             return redirect()->back()->with('success','Update Successfully');
