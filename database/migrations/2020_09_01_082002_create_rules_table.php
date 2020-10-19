@@ -16,7 +16,12 @@ class CreateRulesTable extends Migration
         Schema::create('rules', function (Blueprint $table) {
             $table->increments('id');
             $table->string('rule');
+            $table->string('user_id');
             $table->timestamps();
+        });
+
+        Schema::table('rules', function (Blueprint $table) {
+            $table->foreign('user_id')->references('user_id')->on('users');
         });
     }
 

@@ -29,12 +29,14 @@
                     <thead>
                     <tr>
                         <th> Rule </th>
+                        <th>User Id </th>
                         <th>Actions </th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
                         <th> Rule </th>
+                        <th>User Id </th>
                         <th>Actions </th>
                     </tr>
                     </tfoot>
@@ -44,6 +46,7 @@
 
                         <tr>
                             <td> {{ $rule->rule }} </td>
+                            <td> {{ $rule->user_id }} </td>
                             <td>
                                 <a href="{{ URL::to('edit-rule') }}/{{ $rule->id }}" class="btn btn-outline-primary btn-sm"> Edit </a>
                                 |

@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-// Route::get('/ad', function () {
+// Route::get('/admin', function () {
 //     return view('auth.login');
 // });
 

@@ -39,6 +39,7 @@ class RuleContro extends Controller
     {
         $rule = new Rule();
         $rule->rule=$request->input('rule');  
+        $rule->user_id=auth()->user()->user_id;
         if($rule->save()){
 
             return redirect()->back()->with('success','Save Successfully');

@@ -16,7 +16,12 @@ class CreateUpdatesTable extends Migration
         Schema::create('updates', function (Blueprint $table) {
             $table->increments('id');
             $table->string('update');
+            $table->string('user_id');
             $table->timestamps();
+        });
+
+        Schema::table('updates', function (Blueprint $table) {
+            $table->foreign('user_id')->references('user_id')->on('users');
         });
     }
 

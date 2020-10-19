@@ -29,12 +29,14 @@
                     <thead>
                     <tr>
                         <th> Update </th>
+                        <th> User Id </th>
                         <th>Actions </th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
                         <th> Update </th>
+                        <th> User Id </th>
                         <th>Actions </th>
                     </tr>
                     </tfoot>
@@ -44,6 +46,7 @@
 
                         <tr>
                             <td> {{ $update->update }} </td>
+                            <td> {{ $update->user_id }} </td>
                             <td>
                                 <a href="{{ URL::to('edit-update') }}/{{ $update->id }}" class="btn btn-outline-primary btn-sm"> Edit </a>
                                 |

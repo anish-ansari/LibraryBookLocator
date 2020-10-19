@@ -23,8 +23,13 @@ class CreateBooksTable extends Migration
             $table->string('column_no');
             $table->string('book_image');
             $table->string('book_quantity');
+            $table->string('user_id');
             // dont use timestamp
             //$table->timestamps();
+        });
+
+        Schema::table('books', function (Blueprint $table) {
+            $table->foreign('user_id')->references('user_id')->on('users');
         });
     }
 

@@ -38,7 +38,8 @@ class UpdateContro extends Controller
     public function store(Request $request)
     {
         $update = new Update();
-        $update->update=$request->input('update');  
+        $update->update=$request->input('update'); 
+        $update->user_id=auth()->user()->user_id; 
         if($update->save()){
 
             return redirect()->back()->with('success','Save Successfully');
