@@ -1,6 +1,6 @@
 @extends('layout')
 @section('dashboard-content')
-    <h1> Create Update form</h1>
+    <h1> Create Announcement form</h1>
 
     @if(Session::get('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert" id="gone">
@@ -23,7 +23,7 @@
     <form action="{{ URL::to('post-update-form') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="exampleInputEmail1"> Enter Update</label>
+            <label for="exampleInputEmail1"> Enter Announcement</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter update" name="update">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
