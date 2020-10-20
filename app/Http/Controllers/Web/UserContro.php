@@ -88,4 +88,18 @@ class UserContro extends Controller
          }
          return redirect()->back()->with('delete-failed','Could not delete');
     }
+
+       //  /**
+    //  * Remove the specified resource from storage.
+    //  *
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function softdelete($id)
+    // {
+    //       if(User::softdelete($id)){
+    //          return redirect()->back()->with('deleted','Soft Deleted Successfully');
+    //       }
+    //       return redirect()->back()->with('delete-failed','Could not delete');
+    // }
 }

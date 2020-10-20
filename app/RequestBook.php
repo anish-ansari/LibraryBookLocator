@@ -3,12 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;   //remove this for soft delete
 class RequestBook extends Model
 {
+    use SoftDeletes;             //remove this for soft delete
     public $timestamps = false;
 
-    // public function user(){
-    //     return $this->hasOne('App\User','user_id','id_user');
-    // }
 }

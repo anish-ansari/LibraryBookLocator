@@ -17,6 +17,7 @@ class CreateUpdatesTable extends Migration
             $table->increments('id');
             $table->string('update');
             $table->string('user_id');
+            $table->softDeletes();      //remove this for soft delete
             $table->timestamps();
         });
 

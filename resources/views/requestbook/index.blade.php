@@ -59,8 +59,12 @@
                             {{-- <td> <img src="{{ $requestbook->icon }}" width="100" height="100"></td> --}}
                             <td>
                                 {{-- <a href="{{ URL::to('edit-requestbook') }}/{{ $requestbook->id }}" class="btn btn-outline-primary btn-sm"> Edit </a> --}}
-                                |
-                                <a href="{{ URL::to('delete-requestbook') }}/{{ $requestbook->id }}" class="btn btn-outline-danger btn-sm" onclick="checkDelete()"> Delete </a>
+                                {{-- <a href="{{ URL::to('soft-delete-requestbook') }}/{{ $requestbook->id }}" class="btn btn-outline-warning btn-sm" onclick="checkDelete()">Soft Delete </a>
+                                <hr> --}}
+                                <a href="{{ URL::to('delete-requestbook') }}/{{ $requestbook->id }}" class="btn btn-outline-warning btn-sm" onclick="checkDelete()">Soft Delete </a>
+                                <hr>
+                                 <a href="{{ URL::to('force-delete-requestbook') }}/{{ $requestbook->id }}" class="btn btn-outline-danger btn-sm" onclick="checkDelete()">Force Delete </a>
+
                             </td>
 
                         </tr>

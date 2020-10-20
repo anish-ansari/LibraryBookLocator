@@ -22,7 +22,9 @@
     <div class="card mb-3">
         <div class="card-header">
             <i class="fas fa-table"></i>
-            All Rules </div>
+            All Rules 
+            
+        </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -49,12 +51,15 @@
                             <td> {{ $rule->user_id }} </td>
                             <td>
                                 <a href="{{ URL::to('edit-rule') }}/{{ $rule->id }}" class="btn btn-outline-primary btn-sm"> Edit </a>
-                                |
-                                <a href="{{ URL::to('delete-rule') }}/{{ $rule->id }}" class="btn btn-outline-danger btn-sm" onclick="checkDelete()"> Delete </a>
+                                <hr>
+                                <a href="{{ URL::to('delete-rule') }}/{{ $rule->id }}" class="btn btn-outline-warning btn-sm" onclick="checkDelete()"> Soft Delete </a>
+                                <hr>
+                                <a href="{{ URL::to('force-delete-rule') }}/{{ $rule->id }}" class="btn btn-outline-danger btn-sm" onclick="checkDelete()">Force Delete </a>
+                                {{-- <hr>
+                                <a href="{{ URL::to('restore-deleted-rule') }}/{{ $rule->id }}" class="btn btn-outline-danger btn-sm">Restore </a>                                                                 --}}
                             </td>
 
-                        </tr>
-
+                        </tr>                            
 
                     @endforeach
 

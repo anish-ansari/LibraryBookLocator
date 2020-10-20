@@ -17,6 +17,7 @@ class CreateRulesTable extends Migration
             $table->increments('id');
             $table->string('rule');
             $table->string('user_id');
+            $table->softDeletes();      //remove this for soft delete
             $table->timestamps();
         });
 

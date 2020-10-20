@@ -49,8 +49,11 @@
                             <td> {{ $update->user_id }} </td>
                             <td>
                                 <a href="{{ URL::to('edit-update') }}/{{ $update->id }}" class="btn btn-outline-primary btn-sm"> Edit </a>
-                                |
-                                <a href="{{ URL::to('delete-update') }}/{{ $update->id }}" class="btn btn-outline-danger btn-sm" onclick="checkDelete()"> Delete </a>
+                                <hr>
+                                <a href="{{ URL::to('delete-update') }}/{{ $update->id }}" class="btn btn-outline-warning btn-sm" onclick="checkDelete()"> Soft Delete </a>
+                                <hr>
+                                <a href="{{ URL::to('force-delete-update') }}/{{ $update->id }}" class="btn btn-outline-danger btn-sm" onclick="checkDelete()">Force Delete </a>
+                                
                             </td>
 
                         </tr>

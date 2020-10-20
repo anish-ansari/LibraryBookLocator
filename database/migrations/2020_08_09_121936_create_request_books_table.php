@@ -20,6 +20,7 @@ class CreateRequestBooksTable extends Migration
             $table->string('book_publication');
             $table->string('book_edition');
             $table->string('user_id');
+            $table->softDeletes();      //remove this for soft delete
             // dont uncomment this $table->string('name_user');
             //$table->timestamps();
         });

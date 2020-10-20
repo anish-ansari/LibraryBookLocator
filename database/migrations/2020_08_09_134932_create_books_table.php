@@ -24,6 +24,7 @@ class CreateBooksTable extends Migration
             $table->string('book_image');
             $table->string('book_quantity');
             $table->string('user_id');
+            $table->softDeletes();      //remove this for soft delete
             // dont use timestamp
             //$table->timestamps();
         });

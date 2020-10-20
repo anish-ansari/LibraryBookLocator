@@ -39,17 +39,20 @@ Route::get('create-book','Web\BookContro@create');
 Route::get('all-books','Web\BookContro@index');
 Route::get('edit-book/{id}','Web\BookContro@edit');
 Route::post('update-book/{id}','Web\BookContro@update');
-Route::get('delete-book/{id}','Web\BookContro@destroy');
-
 // soft delete
-// Route::get('soft-delete-book/{id}','Web\BookContro@softdelete');
+Route::get('delete-book/{id}','Web\BookContro@destroy');
+// force delete
+Route::get('force-delete-book/{id}','Web\BookContro@forcedelete');
 //book end
 
 //requestbook start
 Route::get('all-requestbooks','Web\RequestBookContro@index');
 Route::get('edit-requestbook/{id}','Web\RequestBookContro@edit');
 Route::post('update-requestbook/{id}','Web\RequestBookContro@update');
+// soft delete
 Route::get('delete-requestbook/{id}','Web\RequestBookContro@destroy');
+// force delete
+Route::get('force-delete-requestbook/{id}','Web\RequestBookContro@forcedelete');
 //requestbook end
 
 
@@ -58,6 +61,8 @@ Route::get('all-users','Web\UserContro@index');
 // Route::get('edit-user/{id}','Web\UserContro@edit');
 // Route::post('update-user/{id}','Web\UserContro@update');
  Route::get('delete-user/{id}','Web\UserContro@destroy');
+ // soft delete
+// Route::get('soft-delete-user/{id}','Web\UserContro@softdelete');
 //user end
 
 
@@ -67,8 +72,11 @@ Route::post('post-rule-form','Web\RuleContro@store');
 Route::get('all-rules','Web\RuleContro@index');
 Route::get('edit-rule/{id}','Web\RuleContro@edit');
 Route::post('update-rule/{id}','Web\RuleContro@update');
+//soft delete
 Route::get('delete-rule/{id}','Web\RuleContro@destroy');
-
+// force delete
+Route::get('force-delete-rule/{id}','Web\RuleContro@forcedelete');
+// Route::get('restore-deleted-rule/{id}','Web\RuleContro@restore');
 // rule end
 
 // update start
@@ -78,7 +86,10 @@ Route::get('create-update','Web\UpdateContro@create');
 Route::get('all-updates','Web\UpdateContro@index');
 Route::get('edit-update/{id}','Web\UpdateContro@edit');
 Route::post('update-update/{id}','Web\UpdateContro@update');
+//soft delete
 Route::get('delete-update/{id}','Web\UpdateContro@destroy');
+// force delete
+Route::get('force-delete-update/{id}','Web\UpdateContro@forcedelete');
 
 // update end
 

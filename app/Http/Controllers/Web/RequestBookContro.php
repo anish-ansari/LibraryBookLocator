@@ -90,10 +90,25 @@ class RequestBookContro extends Controller
     public function destroy($id)
     {
           if(RequestBook::destroy($id)){
-             return redirect()->back()->with('deleted','Deleted Successfully');
+             return redirect()->back()->with('deleted','Soft Deleted Successfully');
           }
-          return redirect()->back()->with('delete-failed','Could not delete');
+          return redirect()->back()->with('delete-failed','Could not soft delete');
     }
+
+      /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function forcedelete($id)
+    {
+          if(RequestBook::find($id)->forcedelete()){
+             return redirect()->back()->with('deleted','Force Deleted Successfully');
+          }
+          return redirect()->back()->with('delete-failed','Could not force delete');
+    }
+
 }
 
 
