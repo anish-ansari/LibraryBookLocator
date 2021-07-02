@@ -51,3 +51,8 @@ Route::get('rules', 'RuleController@index');
 Route::get('updates', 'UpdateController@index');
 
 // update
+
+
+//map
+Route::get('maps', 'MapController@index');
+//map

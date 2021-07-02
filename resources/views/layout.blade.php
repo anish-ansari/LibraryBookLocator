@@ -95,6 +95,19 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-fw fa-folder"></i>
+                <span>Map</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+
+                <a class="dropdown-item" href="{{ URL::to('create-map') }}"> Add Map</a>
+                <a class="dropdown-item" href="{{ URL::to('all-maps') }}"> All Maps </a>
+
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-fw fa-folder"></i>
                 <span>RequestBook</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">

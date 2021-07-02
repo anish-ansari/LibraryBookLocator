@@ -45,6 +45,21 @@ Route::get('delete-book/{id}','Web\BookContro@destroy');
 Route::get('force-delete-book/{id}','Web\BookContro@forcedelete');
 //book end
 
+//map start
+
+Route::post('post-map-form','Web\MapContro@store');
+Route::get('create-map','Web\MapContro@create');
+Route::get('all-maps','Web\MapContro@index');
+Route::get('edit-map/{id}','Web\MapContro@edit');
+Route::post('update-map/{id}','Web\MapContro@update');
+// soft delete
+Route::get('delete-map/{id}','Web\MapContro@destroy');
+// force delete
+Route::get('force-delete-map/{id}','Web\MapContro@forcedelete');
+//map end
+
+
+
 //requestbook start
 Route::get('all-requestbooks','Web\RequestBookContro@index');
 Route::get('edit-requestbook/{id}','Web\RequestBookContro@edit');
